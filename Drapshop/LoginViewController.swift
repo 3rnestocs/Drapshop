@@ -31,6 +31,11 @@ class LoginViewController: UIViewController {
         logoImageView.layer.cornerRadius = logoImageView.frame.height / 2
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     // MARK: - Setup
     private func setup() {
         setupUI()
@@ -62,11 +67,17 @@ class LoginViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction private func registrarseButtonTapped(_ sender: DSButton) {
-        
+        let user = User(username: "ernesti", password: "password")
+        UserManager.updateUser(user)
     }
     
     @IBAction private func entrarButtonTapped(_ sender: DSButton) {
-        
+        if usuarioView.textField.text == UserManager.getUser()?.username && claveView.textField.text == UserManager.getUser()?.password {
+        let homeVC = HomeViewController()
+        navigationController?.pushViewController(homeVC, animated: true)
+        } else {
+            print("T3ST wrong password or username")
+        }
     }
     
     @IBAction private func olvidarButtonTapped(_ sender: DSButton) {

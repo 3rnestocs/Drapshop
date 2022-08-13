@@ -138,6 +138,9 @@ extension DSTextFieldView: UITextFieldDelegate {
            let textRange = Range(range, in: text),
            let updatedText = text.replacingCharacters(in: textRange,
                                                       with: string) as String? {
+            if textType == .password, updatedText.count > 8 {
+                return false
+            }
         }
         return true
     }

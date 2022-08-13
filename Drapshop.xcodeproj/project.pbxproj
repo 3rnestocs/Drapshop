@@ -16,6 +16,11 @@
 		8D184A2B28A720BA00F8E409 /* DSTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D184A2728A720B900F8E409 /* DSTextFieldView.xib */; };
 		8D184A2C28A720BA00F8E409 /* DSTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D184A2828A720B900F8E409 /* DSTextFieldView.swift */; };
 		8D184A2D28A720BA00F8E409 /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D184A2A28A720BA00F8E409 /* DSButton.swift */; };
+		8D3D838228A7CB6400611DC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D838028A7CB6400611DC6 /* HomeViewController.swift */; };
+		8D3D838328A7CB6400611DC6 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3D838128A7CB6400611DC6 /* HomeViewController.xib */; };
+		8D3D838628A7CD8900611DC6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D838528A7CD8900611DC6 /* UserDefaultsManager.swift */; };
+		8D3D838A28A7D19E00611DC6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D838928A7D19E00611DC6 /* UserModel.swift */; };
+		8D3D838D28A7D25E00611DC6 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D838C28A7D25E00611DC6 /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		8D184A2728A720B900F8E409 /* DSTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSTextFieldView.xib; sourceTree = "<group>"; };
 		8D184A2828A720B900F8E409 /* DSTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSTextFieldView.swift; sourceTree = "<group>"; };
 		8D184A2A28A720BA00F8E409 /* DSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSButton.swift; sourceTree = "<group>"; };
+		8D3D838028A7CB6400611DC6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8D3D838128A7CB6400611DC6 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		8D3D838528A7CD8900611DC6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		8D3D838928A7D19E00611DC6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8D3D838C28A7D25E00611DC6 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +74,10 @@
 			children = (
 				8D184A0C28A715EF00F8E409 /* AppDelegate.swift */,
 				8D184A0E28A715EF00F8E409 /* SceneDelegate.swift */,
-				8D184A2428A7208800F8E409 /* Utils */,
+				8D3D838728A7D17200611DC6 /* Networking */,
+				8D3D838428A7CD7A00611DC6 /* Managers */,
 				8D184A2028A71D5A00F8E409 /* Scenes */,
+				8D184A2428A7208800F8E409 /* Utils */,
 				8D184A1528A715F400F8E409 /* Assets.xcassets */,
 				8D184A1728A715F400F8E409 /* LaunchScreen.storyboard */,
 				8D184A1A28A715F400F8E409 /* Info.plist */,
@@ -76,6 +88,7 @@
 		8D184A2028A71D5A00F8E409 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8D3D837F28A7CB4D00611DC6 /* Home */,
 				8D184A2128A71D6100F8E409 /* Login */,
 			);
 			path = Scenes;
@@ -93,6 +106,7 @@
 		8D184A2428A7208800F8E409 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8D3D838B28A7D25400611DC6 /* Extensions */,
 				8D184A2528A720A600F8E409 /* CustomViews */,
 			);
 			path = Utils;
@@ -110,8 +124,8 @@
 		8D184A2628A720B900F8E409 /* textField */ = {
 			isa = PBXGroup;
 			children = (
-				8D184A2728A720B900F8E409 /* DSTextFieldView.xib */,
 				8D184A2828A720B900F8E409 /* DSTextFieldView.swift */,
+				8D184A2728A720B900F8E409 /* DSTextFieldView.xib */,
 			);
 			path = textField;
 			sourceTree = "<group>";
@@ -122,6 +136,47 @@
 				8D184A2A28A720BA00F8E409 /* DSButton.swift */,
 			);
 			path = button;
+			sourceTree = "<group>";
+		};
+		8D3D837F28A7CB4D00611DC6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8D3D838028A7CB6400611DC6 /* HomeViewController.swift */,
+				8D3D838128A7CB6400611DC6 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8D3D838428A7CD7A00611DC6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8D3D838528A7CD8900611DC6 /* UserDefaultsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8D3D838728A7D17200611DC6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8D3D838828A7D19100611DC6 /* Models */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8D3D838828A7D19100611DC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D3D838928A7D19E00611DC6 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8D3D838B28A7D25400611DC6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8D3D838C28A7D25E00611DC6 /* UserDefaults.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +239,7 @@
 			files = (
 				8D184A1928A715F400F8E409 /* LaunchScreen.storyboard in Resources */,
 				8D184A1628A715F400F8E409 /* Assets.xcassets in Resources */,
+				8D3D838328A7CB6400611DC6 /* HomeViewController.xib in Resources */,
 				8D184A2B28A720BA00F8E409 /* DSTextFieldView.xib in Resources */,
 				8D184A2328A71D8600F8E409 /* LoginViewController.xib in Resources */,
 			);
@@ -198,9 +254,13 @@
 			files = (
 				8D184A1128A715EF00F8E409 /* LoginViewController.swift in Sources */,
 				8D184A0D28A715EF00F8E409 /* AppDelegate.swift in Sources */,
+				8D3D838A28A7D19E00611DC6 /* UserModel.swift in Sources */,
 				8D184A2C28A720BA00F8E409 /* DSTextFieldView.swift in Sources */,
+				8D3D838628A7CD8900611DC6 /* UserDefaultsManager.swift in Sources */,
+				8D3D838D28A7D25E00611DC6 /* UserDefaults.swift in Sources */,
 				8D184A2D28A720BA00F8E409 /* DSButton.swift in Sources */,
 				8D184A0F28A715EF00F8E409 /* SceneDelegate.swift in Sources */,
+				8D3D838228A7CB6400611DC6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
