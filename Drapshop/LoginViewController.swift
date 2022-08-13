@@ -20,8 +20,16 @@ class LoginViewController: DSViewController {
     @IBOutlet private(set) weak var claveView: DSTextFieldView!
     @IBOutlet private(set) weak var entrarButton: DSButton!
     @IBOutlet private(set) weak var olvidarButton: DSButton!
+    @IBOutlet private(set) weak var usuarioWarningView: UIView!
+    @IBOutlet private(set) weak var usuarioWarningLabel: UILabel!
+    @IBOutlet private(set) weak var claveWarningView: UIView!
+    @IBOutlet private(set) weak var claveWarningLabel: UILabel!
     
     // MARK: - Properties
+    private var presenter: LoginPresenter {
+        let presenter = LoginPresenter()
+        return presenter
+    }
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -66,6 +74,46 @@ class LoginViewController: DSViewController {
     }
     
     // MARK: - Helpers
+    private func checkCredentials() -> Bool {
+        var hasValidCredentials = false
+        
+        let sameUser = presenter.checkCredential(usuarioView.textField.text, type: .username)
+        let samePassword = presenter.checkCredential(claveView.textField.text, type: .password)
+        
+        if !sameUser {
+            displayWarning(.username, true)
+            hasValidCredentials = false
+        } else {
+            displayWarning(.username, false)
+        }
+        if !samePassword {
+            displayWarning(.password, true)
+            hasValidCredentials = false
+        } else {
+            displayWarning(.password, false)
+        }
+        
+        if sameUser && samePassword {
+            displayWarning(.username, false)
+            displayWarning(.password, false)
+            hasValidCredentials = true
+        }
+        
+        return hasValidCredentials
+    }
+    
+    private func displayWarning(_ type: TextType, _ should: Bool) {
+        switch type {
+        case .username:
+            usuarioWarningLabel.text = "El usuario es incorrecto, inténtalo de nuevo"
+            usuarioWarningView.isHidden = !should
+        case .password:
+            claveWarningLabel.text = "La contraseña es incorrecta, inténtalo de nuevo"
+            claveWarningView.isHidden = !should
+        default:
+            break
+        }
+    }
     
     // MARK: - Actions
     @IBAction private func registrarseButtonTapped(_ sender: DSButton) {
@@ -74,10 +122,8 @@ class LoginViewController: DSViewController {
     }
     
     @IBAction private func entrarButtonTapped(_ sender: DSButton) {
-        if usuarioView.textField.text == UserManager.getUser()?.username && claveView.textField.text == UserManager.getUser()?.password {
+        if checkCredentials() {
             SceneSelector.shared.setHomeScene()
-        } else {
-            print("T3ST wrong password or username")
         }
     }
     

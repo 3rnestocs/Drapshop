@@ -26,6 +26,7 @@
 		8D3D839528A7DA9500611DC6 /* DSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839428A7DA9500611DC6 /* DSViewController.swift */; };
 		8D3D839728A7DFAB00611DC6 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839628A7DFAB00611DC6 /* SignupPresenter.swift */; };
 		8D3D839928A7EA3E00611DC6 /* SceneSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839828A7EA3E00611DC6 /* SceneSelector.swift */; };
+		8D3D839B28A7EBE800611DC6 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839A28A7EBE800611DC6 /* LoginPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		8D3D839428A7DA9500611DC6 /* DSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewController.swift; sourceTree = "<group>"; };
 		8D3D839628A7DFAB00611DC6 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		8D3D839828A7EA3E00611DC6 /* SceneSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneSelector.swift; sourceTree = "<group>"; };
+		8D3D839A28A7EBE800611DC6 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				8D184A1028A715EF00F8E409 /* LoginViewController.swift */,
 				8D184A2228A71D8600F8E409 /* LoginViewController.xib */,
+				8D3D839A28A7EBE800611DC6 /* LoginPresenter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			files = (
 				8D184A1128A715EF00F8E409 /* LoginViewController.swift in Sources */,
 				8D184A0D28A715EF00F8E409 /* AppDelegate.swift in Sources */,
+				8D3D839B28A7EBE800611DC6 /* LoginPresenter.swift in Sources */,
 				8D3D839128A7D6BC00611DC6 /* SignupViewController.swift in Sources */,
 				8D3D838A28A7D19E00611DC6 /* UserModel.swift in Sources */,
 				8D3D839928A7EA3E00611DC6 /* SceneSelector.swift in Sources */,

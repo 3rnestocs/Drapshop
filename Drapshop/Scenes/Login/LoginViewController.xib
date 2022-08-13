@@ -11,12 +11,16 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Drapshop" customModuleProvider="target">
             <connections>
                 <outlet property="claveView" destination="rpB-Fp-xSA" id="gIF-K6-NTZ"/>
+                <outlet property="claveWarningLabel" destination="gnt-nx-mpN" id="uMr-8Y-Ba9"/>
+                <outlet property="claveWarningView" destination="vTT-Ae-3hz" id="Yko-RV-N5h"/>
                 <outlet property="entrarButton" destination="XN4-rM-IcH" id="Lui-5d-lMg"/>
                 <outlet property="logoImageView" destination="s47-5Z-FGn" id="gDV-vh-vDg"/>
                 <outlet property="olvidarButton" destination="Ffw-Fh-dee" id="8Xo-NV-03b"/>
                 <outlet property="registrateButton" destination="8Bi-qD-v6L" id="d74-Dv-PPh"/>
                 <outlet property="scrollView" destination="UTU-kF-IzX" id="5jb-fs-vGF"/>
                 <outlet property="usuarioView" destination="g8e-BE-zsE" id="Il4-9R-YsK"/>
+                <outlet property="usuarioWarningLabel" destination="P9F-JI-yCL" id="wnI-Hm-g4P"/>
+                <outlet property="usuarioWarningView" destination="ppU-jT-7jv" id="OSC-gg-BU4"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ggF-1s-aoA"/>
             </connections>
         </placeholder>
@@ -95,20 +99,66 @@
                                                 <constraint firstItem="sVB-hs-mqo" firstAttribute="leading" secondItem="0qm-3H-zmq" secondAttribute="trailing" constant="16" id="ynd-vz-qKi"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8e-BE-zsE" customClass="DSTextFieldView" customModule="Drapshop" customModuleProvider="target">
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Ga-YP-F3a">
                                             <rect key="frame" x="0.0" y="128" width="366" height="48"/>
-                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="48" id="Aqr-XL-DDv"/>
-                                            </constraints>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpB-Fp-xSA" customClass="DSTextFieldView" customModule="Drapshop" customModuleProvider="target">
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8e-BE-zsE" customClass="DSTextFieldView" customModule="Drapshop" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="48"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="Aqr-XL-DDv"/>
+                                                    </constraints>
+                                                </view>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppU-jT-7jv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="0.0"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La contraseña debe tener 8 carácteres mínimo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9F-JI-yCL">
+                                                            <rect key="frame" x="24" y="0.0" width="318" height="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                            <color key="textColor" systemColor="systemRedColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="P9F-JI-yCL" firstAttribute="top" secondItem="ppU-jT-7jv" secondAttribute="top" id="Xhy-YN-Itn"/>
+                                                        <constraint firstItem="P9F-JI-yCL" firstAttribute="leading" secondItem="ppU-jT-7jv" secondAttribute="leading" constant="24" id="pCb-qR-Ygh"/>
+                                                        <constraint firstAttribute="bottom" secondItem="P9F-JI-yCL" secondAttribute="bottom" id="pTe-Bl-P5f"/>
+                                                        <constraint firstAttribute="trailing" secondItem="P9F-JI-yCL" secondAttribute="trailing" constant="24" id="tq5-Ov-vfd"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Su8-Ao-OxC">
                                             <rect key="frame" x="0.0" y="192" width="366" height="48"/>
-                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="48" id="iDh-89-asf"/>
-                                            </constraints>
-                                        </view>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpB-Fp-xSA" customClass="DSTextFieldView" customModule="Drapshop" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="48"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="iDh-89-asf"/>
+                                                    </constraints>
+                                                </view>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTT-Ae-3hz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="0.0"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La contraseña debe tener 8 carácteres mínimo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnt-nx-mpN">
+                                                            <rect key="frame" x="24" y="0.0" width="318" height="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                            <color key="textColor" systemColor="systemRedColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="gnt-nx-mpN" secondAttribute="bottom" id="QKS-X0-ZC7"/>
+                                                        <constraint firstAttribute="trailing" secondItem="gnt-nx-mpN" secondAttribute="trailing" constant="24" id="bbB-qq-OnM"/>
+                                                        <constraint firstItem="gnt-nx-mpN" firstAttribute="top" secondItem="vTT-Ae-3hz" secondAttribute="top" id="fmR-Am-YK2"/>
+                                                        <constraint firstItem="gnt-nx-mpN" firstAttribute="leading" secondItem="vTT-Ae-3hz" secondAttribute="leading" constant="24" id="wEE-ud-rK4"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XN4-rM-IcH" customClass="DSButton" customModule="Drapshop" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="256" width="366" height="48"/>
                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -174,6 +224,9 @@
         <image name="logo" width="512" height="512"/>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
