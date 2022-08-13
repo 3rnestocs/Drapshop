@@ -21,6 +21,10 @@
 		8D3D838628A7CD8900611DC6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D838528A7CD8900611DC6 /* UserDefaultsManager.swift */; };
 		8D3D838A28A7D19E00611DC6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D838928A7D19E00611DC6 /* UserModel.swift */; };
 		8D3D838D28A7D25E00611DC6 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D838C28A7D25E00611DC6 /* UserDefaults.swift */; };
+		8D3D839128A7D6BC00611DC6 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D838F28A7D6BC00611DC6 /* SignupViewController.swift */; };
+		8D3D839228A7D6BC00611DC6 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3D839028A7D6BC00611DC6 /* SignupViewController.xib */; };
+		8D3D839528A7DA9500611DC6 /* DSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839428A7DA9500611DC6 /* DSViewController.swift */; };
+		8D3D839728A7DFAB00611DC6 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839628A7DFAB00611DC6 /* SignupPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		8D3D838528A7CD8900611DC6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		8D3D838928A7D19E00611DC6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8D3D838C28A7D25E00611DC6 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		8D3D838F28A7D6BC00611DC6 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		8D3D839028A7D6BC00611DC6 /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		8D3D839428A7DA9500611DC6 /* DSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewController.swift; sourceTree = "<group>"; };
+		8D3D839628A7DFAB00611DC6 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 		8D184A2028A71D5A00F8E409 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8D3D838E28A7D6A000611DC6 /* Signup */,
 				8D3D837F28A7CB4D00611DC6 /* Home */,
 				8D184A2128A71D6100F8E409 /* Login */,
 			);
@@ -115,6 +124,7 @@
 		8D184A2528A720A600F8E409 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				8D3D839328A7DA8B00611DC6 /* viewController */,
 				8D184A2928A720B900F8E409 /* button */,
 				8D184A2628A720B900F8E409 /* textField */,
 			);
@@ -179,6 +189,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		8D3D838E28A7D6A000611DC6 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				8D3D838F28A7D6BC00611DC6 /* SignupViewController.swift */,
+				8D3D839028A7D6BC00611DC6 /* SignupViewController.xib */,
+				8D3D839628A7DFAB00611DC6 /* SignupPresenter.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		8D3D839328A7DA8B00611DC6 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D3D839428A7DA9500611DC6 /* DSViewController.swift */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3D839228A7D6BC00611DC6 /* SignupViewController.xib in Resources */,
 				8D184A1928A715F400F8E409 /* LaunchScreen.storyboard in Resources */,
 				8D184A1628A715F400F8E409 /* Assets.xcassets in Resources */,
 				8D3D838328A7CB6400611DC6 /* HomeViewController.xib in Resources */,
@@ -254,12 +283,15 @@
 			files = (
 				8D184A1128A715EF00F8E409 /* LoginViewController.swift in Sources */,
 				8D184A0D28A715EF00F8E409 /* AppDelegate.swift in Sources */,
+				8D3D839128A7D6BC00611DC6 /* SignupViewController.swift in Sources */,
 				8D3D838A28A7D19E00611DC6 /* UserModel.swift in Sources */,
 				8D184A2C28A720BA00F8E409 /* DSTextFieldView.swift in Sources */,
 				8D3D838628A7CD8900611DC6 /* UserDefaultsManager.swift in Sources */,
 				8D3D838D28A7D25E00611DC6 /* UserDefaults.swift in Sources */,
 				8D184A2D28A720BA00F8E409 /* DSButton.swift in Sources */,
 				8D184A0F28A715EF00F8E409 /* SceneDelegate.swift in Sources */,
+				8D3D839528A7DA9500611DC6 /* DSViewController.swift in Sources */,
+				8D3D839728A7DFAB00611DC6 /* SignupPresenter.swift in Sources */,
 				8D3D838228A7CB6400611DC6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: DSViewController {
 
     // MARK: - Constants
     @IBOutlet private(set) weak var scrollView: UIScrollView!
@@ -30,13 +30,12 @@ class LoginViewController: UIViewController {
         super.viewDidLayoutSubviews()
         logoImageView.layer.cornerRadius = logoImageView.frame.height / 2
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-    
+
     // MARK: - Setup
+    override func viewControllerTheme() -> DSViewController.NavigationStyle {
+        .hidden
+    }
+
     private func setup() {
         setupUI()
         setupObserver()
@@ -67,14 +66,14 @@ class LoginViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction private func registrarseButtonTapped(_ sender: DSButton) {
-        let user = User(username: "ernesti", password: "password")
-        UserManager.updateUser(user)
+        let signupVC = SignupViewController()
+        navigationController?.pushViewController(signupVC, animated: true)
     }
     
     @IBAction private func entrarButtonTapped(_ sender: DSButton) {
         if usuarioView.textField.text == UserManager.getUser()?.username && claveView.textField.text == UserManager.getUser()?.password {
         let homeVC = HomeViewController()
-        navigationController?.pushViewController(homeVC, animated: true)
+        presentVC(homeVC)
         } else {
             print("T3ST wrong password or username")
         }

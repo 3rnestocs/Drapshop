@@ -7,7 +7,7 @@
 
 import UIKit
 
-    // MARK: - Types
+// MARK: - Types
 enum TextType {
     case defaultType
     case username
