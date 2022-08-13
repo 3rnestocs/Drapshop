@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Drapshop" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="uyK-f8-AiH" id="OIt-mb-RA9"/>
+                <outlet property="salirButton" destination="efY-ub-2fM" id="2jY-O9-A4d"/>
                 <outlet property="searchView" destination="pfE-5m-vFG" id="aG4-n6-3oq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,8 +21,23 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efY-ub-2fM">
+                    <rect key="frame" x="24" y="44" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="TiZ-bC-WhQ"/>
+                        <constraint firstAttribute="height" constant="48" id="cL0-Bf-BT5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Salir">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="salirButtonTapped:" destination="-1" eventType="touchUpInside" id="1sA-Ok-Ly5"/>
+                    </connections>
+                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfE-5m-vFG" customClass="DSTextFieldView" customModule="Drapshop" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="44" width="414" height="48"/>
+                    <rect key="frame" x="88" y="44" width="302" height="48"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="PbO-b7-sbE"/>
@@ -29,7 +45,7 @@
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="uyK-f8-AiH">
                     <rect key="frame" x="0.0" y="140" width="414" height="722"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dey-bU-Xc9">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -39,13 +55,15 @@
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="uyK-f8-AiH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="US2-41-2gg"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pfE-5m-vFG" secondAttribute="trailing" id="Vvj-DS-z4X"/>
-                <constraint firstItem="pfE-5m-vFG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Xyw-li-1BT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pfE-5m-vFG" secondAttribute="trailing" constant="24" id="Vvj-DS-z4X"/>
+                <constraint firstItem="efY-ub-2fM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WWM-BL-JbA"/>
                 <constraint firstItem="uyK-f8-AiH" firstAttribute="top" secondItem="pfE-5m-vFG" secondAttribute="bottom" constant="48" id="bh6-26-GEA"/>
+                <constraint firstItem="efY-ub-2fM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="gcY-rb-kjH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uyK-f8-AiH" secondAttribute="bottom" id="h5E-r1-l19"/>
+                <constraint firstItem="pfE-5m-vFG" firstAttribute="leading" secondItem="efY-ub-2fM" secondAttribute="trailing" constant="16" id="r8y-uc-pPc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uyK-f8-AiH" secondAttribute="trailing" id="vc2-Qr-dIN"/>
                 <constraint firstItem="pfE-5m-vFG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="woY-4I-jXO"/>
             </constraints>

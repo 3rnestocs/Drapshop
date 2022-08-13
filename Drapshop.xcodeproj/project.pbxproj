@@ -25,6 +25,7 @@
 		8D3D839228A7D6BC00611DC6 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3D839028A7D6BC00611DC6 /* SignupViewController.xib */; };
 		8D3D839528A7DA9500611DC6 /* DSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839428A7DA9500611DC6 /* DSViewController.swift */; };
 		8D3D839728A7DFAB00611DC6 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839628A7DFAB00611DC6 /* SignupPresenter.swift */; };
+		8D3D839928A7EA3E00611DC6 /* SceneSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839828A7EA3E00611DC6 /* SceneSelector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		8D3D839028A7D6BC00611DC6 /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 		8D3D839428A7DA9500611DC6 /* DSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewController.swift; sourceTree = "<group>"; };
 		8D3D839628A7DFAB00611DC6 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
+		8D3D839828A7EA3E00611DC6 /* SceneSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneSelector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		8D184A2428A7208800F8E409 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8D3D839828A7EA3E00611DC6 /* SceneSelector.swift */,
 				8D3D838B28A7D25400611DC6 /* Extensions */,
 				8D184A2528A720A600F8E409 /* CustomViews */,
 			);
@@ -285,6 +288,7 @@
 				8D184A0D28A715EF00F8E409 /* AppDelegate.swift in Sources */,
 				8D3D839128A7D6BC00611DC6 /* SignupViewController.swift in Sources */,
 				8D3D838A28A7D19E00611DC6 /* UserModel.swift in Sources */,
+				8D3D839928A7EA3E00611DC6 /* SceneSelector.swift in Sources */,
 				8D184A2C28A720BA00F8E409 /* DSTextFieldView.swift in Sources */,
 				8D3D838628A7CD8900611DC6 /* UserDefaultsManager.swift in Sources */,
 				8D3D838D28A7D25E00611DC6 /* UserDefaults.swift in Sources */,

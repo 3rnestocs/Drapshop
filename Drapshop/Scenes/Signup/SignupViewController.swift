@@ -9,6 +9,9 @@ import UIKit
 
 class SignupViewController: DSViewController {
 
+    // MARK: - Constant
+    static let identifier = String(describing: SignupViewController.self)
+    
     // MARK: - Outlets
     @IBOutlet private(set) weak var imageView: UIImageView!
     @IBOutlet private(set) weak var usuarioView: DSTextFieldView!
@@ -96,8 +99,7 @@ class SignupViewController: DSViewController {
         presenter.registerUser(
             password: claveView.textField.text, username: usuarioView.textField.text
         )
-        let homeVC = HomeViewController()
-        presentVC(homeVC)
+        SceneSelector.shared.setHomeScene()
     }
     
     // MARK: - Actions

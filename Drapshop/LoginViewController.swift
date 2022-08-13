@@ -9,6 +9,9 @@ import UIKit
 
 class LoginViewController: DSViewController {
 
+    // MARK: - Constant
+    static let identifier = String(describing: LoginViewController.self)
+    
     // MARK: - Constants
     @IBOutlet private(set) weak var scrollView: UIScrollView!
     @IBOutlet private(set) weak var logoImageView: UIImageView!
@@ -72,8 +75,7 @@ class LoginViewController: DSViewController {
     
     @IBAction private func entrarButtonTapped(_ sender: DSButton) {
         if usuarioView.textField.text == UserManager.getUser()?.username && claveView.textField.text == UserManager.getUser()?.password {
-        let homeVC = HomeViewController()
-        presentVC(homeVC)
+            SceneSelector.shared.setHomeScene()
         } else {
             print("T3ST wrong password or username")
         }

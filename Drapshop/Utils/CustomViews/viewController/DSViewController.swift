@@ -57,10 +57,4 @@ class DSViewController: UIViewController {
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         navigationController?.navigationBar.tintColor = .black
     }
-    
-    func presentVC(_ vc: UIViewController) {
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
-    }
 }
