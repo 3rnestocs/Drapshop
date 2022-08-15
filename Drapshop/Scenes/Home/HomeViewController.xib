@@ -44,7 +44,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="uyK-f8-AiH">
-                    <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                    <rect key="frame" x="0.0" y="108" width="414" height="788"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dey-bU-Xc9">
                         <size key="itemSize" width="128" height="128"/>
@@ -60,9 +60,9 @@
                 <constraint firstItem="uyK-f8-AiH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="US2-41-2gg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pfE-5m-vFG" secondAttribute="trailing" constant="24" id="Vvj-DS-z4X"/>
                 <constraint firstItem="efY-ub-2fM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WWM-BL-JbA"/>
-                <constraint firstItem="uyK-f8-AiH" firstAttribute="top" secondItem="pfE-5m-vFG" secondAttribute="bottom" constant="48" id="bh6-26-GEA"/>
+                <constraint firstItem="uyK-f8-AiH" firstAttribute="top" secondItem="pfE-5m-vFG" secondAttribute="bottom" constant="16" id="bh6-26-GEA"/>
                 <constraint firstItem="efY-ub-2fM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="gcY-rb-kjH"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uyK-f8-AiH" secondAttribute="bottom" id="h5E-r1-l19"/>
+                <constraint firstAttribute="bottom" secondItem="uyK-f8-AiH" secondAttribute="bottom" id="h5E-r1-l19"/>
                 <constraint firstItem="pfE-5m-vFG" firstAttribute="leading" secondItem="efY-ub-2fM" secondAttribute="trailing" constant="16" id="r8y-uc-pPc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uyK-f8-AiH" secondAttribute="trailing" id="vc2-Qr-dIN"/>
                 <constraint firstItem="pfE-5m-vFG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="woY-4I-jXO"/>

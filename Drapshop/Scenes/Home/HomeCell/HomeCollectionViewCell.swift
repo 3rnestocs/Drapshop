@@ -16,6 +16,11 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet private(set) weak var productNameLabel: UILabel!
     @IBOutlet private(set) weak var productImageView: UIImageView!
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.layer.cornerRadius = 32
+    }
+    
     func setupCell(image: String?, name: String) {
         productNameLabel.text = name
         if let image = image, let url = URL(string: image) {

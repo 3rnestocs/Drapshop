@@ -11,13 +11,13 @@ import Foundation
 class SceneSelector {
     static let shared = SceneSelector()
 
-    func setInitialScene() {
+    func setInitialScene() -> UIViewController {
         if UserDefaults.standard.user != nil {
             let homeVC = HomeViewController(nibName: HomeViewController.identifier, bundle: nil)
-            setScene(fromViewController: homeVC)
+            return homeVC
         } else {
             let loginVC = LoginViewController(nibName: LoginViewController.identifier, bundle: nil)
-            setScene(fromViewController: loginVC)
+            return loginVC
         }
     }
 

@@ -28,9 +28,9 @@ class HomePresenter {
         }
     }
     
-    func getCatalogue() -> [Image]? {
+    func getCatalogue() -> [Image] {
         guard let catalogue = catalogue else {
-            return nil
+            return []
         }
         return catalogue
     }

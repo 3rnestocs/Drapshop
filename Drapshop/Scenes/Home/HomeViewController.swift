@@ -20,11 +20,11 @@ class HomeViewController: DSViewController {
     @IBOutlet private(set) weak var collectionView: UICollectionView!
     
     // MARK: - Properties
-    private var presenter: HomePresenter {
+    lazy var presenter: HomePresenter = {
         let presenter = HomePresenter()
         presenter.viewController = self
         return presenter
-    }
+    }()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -53,6 +53,8 @@ class HomeViewController: DSViewController {
         collectionView.register(UINib(nibName: HomeCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.backgroundColor = .white
+        view.backgroundColor = .white
     }
     
     // MARK: - Helpers
@@ -81,19 +83,23 @@ extension HomeViewController: HomePresenterDelegate {
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        20//        presenter.catalogue?.count ?? 0
+        presenter.getCatalogue().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.setupCell(image: nil, name: "Product number \(indexPath.row)")
+        cell.setupCell(image: presenter.getCatalogue()[indexPath.row].urls.regular, name: "Product number \(indexPath.row)")
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        print("T3ST", presenter.getCatalogue().count, presenter.catalogue?.count)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size: CGFloat = UIScreen.main.bounds.width / 2.3
+        let size: CGFloat = UIScreen.main.bounds.width / 2.4
         return CGSize(width: size, height: size)
     }
     
