@@ -7,4 +7,6 @@ target 'Drapshop' do
 
   # Pods for Drapshop
 
+	pod 'Alamofire'
+
 end

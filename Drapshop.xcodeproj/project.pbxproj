@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FF18CE4A70650654A77A43D /* Pods_Drapshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668365142B84C367B646481B /* Pods_Drapshop.framework */; };
 		8D184A0D28A715EF00F8E409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D184A0C28A715EF00F8E409 /* AppDelegate.swift */; };
 		8D184A0F28A715EF00F8E409 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D184A0E28A715EF00F8E409 /* SceneDelegate.swift */; };
 		8D184A1128A715EF00F8E409 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D184A1028A715EF00F8E409 /* LoginViewController.swift */; };
@@ -27,9 +28,15 @@
 		8D3D839728A7DFAB00611DC6 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839628A7DFAB00611DC6 /* SignupPresenter.swift */; };
 		8D3D839928A7EA3E00611DC6 /* SceneSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839828A7EA3E00611DC6 /* SceneSelector.swift */; };
 		8D3D839B28A7EBE800611DC6 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839A28A7EBE800611DC6 /* LoginPresenter.swift */; };
+		8DFD1F0F28A9CE0100F96887 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD1F0E28A9CE0100F96887 /* HomePresenter.swift */; };
+		8DFD1F1128A9CE2A00F96887 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD1F1028A9CE2A00F96887 /* ProductModel.swift */; };
+		8DFD1F1328A9D00100F96887 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD1F1228A9D00100F96887 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A71935764962E877E8A6375 /* Pods-Drapshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drapshop.release.xcconfig"; path = "Target Support Files/Pods-Drapshop/Pods-Drapshop.release.xcconfig"; sourceTree = "<group>"; };
+		0ADD6DE47534440831479F85 /* Pods-Drapshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drapshop.debug.xcconfig"; path = "Target Support Files/Pods-Drapshop/Pods-Drapshop.debug.xcconfig"; sourceTree = "<group>"; };
+		668365142B84C367B646481B /* Pods_Drapshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Drapshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D184A0928A715EF00F8E409 /* Drapshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drapshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D184A0C28A715EF00F8E409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D184A0E28A715EF00F8E409 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +59,9 @@
 		8D3D839628A7DFAB00611DC6 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		8D3D839828A7EA3E00611DC6 /* SceneSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneSelector.swift; sourceTree = "<group>"; };
 		8D3D839A28A7EBE800611DC6 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		8DFD1F0E28A9CE0100F96887 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		8DFD1F1028A9CE2A00F96887 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		8DFD1F1228A9D00100F96887 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +69,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF18CE4A70650654A77A43D /* Pods_Drapshop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7EB8D96E0FD0A1390E6D37FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				668365142B84C367B646481B /* Pods_Drapshop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A3FBF357B785CE8ED6F28D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0ADD6DE47534440831479F85 /* Pods-Drapshop.debug.xcconfig */,
+				0A71935764962E877E8A6375 /* Pods-Drapshop.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8D184A0028A715EE00F8E409 = {
 			isa = PBXGroup;
 			children = (
 				8D184A0B28A715EF00F8E409 /* Drapshop */,
 				8D184A0A28A715EF00F8E409 /* Products */,
+				8A3FBF357B785CE8ED6F28D4 /* Pods */,
+				7EB8D96E0FD0A1390E6D37FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,9 +141,9 @@
 		8D184A2128A71D6100F8E409 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				8D3D839A28A7EBE800611DC6 /* LoginPresenter.swift */,
 				8D184A1028A715EF00F8E409 /* LoginViewController.swift */,
 				8D184A2228A71D8600F8E409 /* LoginViewController.xib */,
-				8D3D839A28A7EBE800611DC6 /* LoginPresenter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -157,6 +188,7 @@
 		8D3D837F28A7CB4D00611DC6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8DFD1F0E28A9CE0100F96887 /* HomePresenter.swift */,
 				8D3D838028A7CB6400611DC6 /* HomeViewController.swift */,
 				8D3D838128A7CB6400611DC6 /* HomeViewController.xib */,
 			);
@@ -175,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				8D3D838828A7D19100611DC6 /* Models */,
+				8DFD1F1228A9D00100F96887 /* NetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -183,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				8D3D838928A7D19E00611DC6 /* UserModel.swift */,
+				8DFD1F1028A9CE2A00F96887 /* ProductModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,9 +232,9 @@
 		8D3D838E28A7D6A000611DC6 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				8D3D839628A7DFAB00611DC6 /* SignupPresenter.swift */,
 				8D3D838F28A7D6BC00611DC6 /* SignupViewController.swift */,
 				8D3D839028A7D6BC00611DC6 /* SignupViewController.xib */,
-				8D3D839628A7DFAB00611DC6 /* SignupPresenter.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -220,9 +254,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D184A1D28A715F400F8E409 /* Build configuration list for PBXNativeTarget "Drapshop" */;
 			buildPhases = (
+				AA53BD4FFDEAB7F3B195A551 /* [CP] Check Pods Manifest.lock */,
 				8D184A0528A715EF00F8E409 /* Sources */,
 				8D184A0628A715EF00F8E409 /* Frameworks */,
 				8D184A0728A715EF00F8E409 /* Resources */,
+				F2B94C58D9E24ABAF057ACB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,6 +318,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AA53BD4FFDEAB7F3B195A551 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Drapshop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2B94C58D9E24ABAF057ACB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Drapshop/Pods-Drapshop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Drapshop/Pods-Drapshop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Drapshop/Pods-Drapshop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D184A0528A715EF00F8E409 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -290,17 +368,20 @@
 				8D184A1128A715EF00F8E409 /* LoginViewController.swift in Sources */,
 				8D184A0D28A715EF00F8E409 /* AppDelegate.swift in Sources */,
 				8D3D839B28A7EBE800611DC6 /* LoginPresenter.swift in Sources */,
+				8DFD1F0F28A9CE0100F96887 /* HomePresenter.swift in Sources */,
 				8D3D839128A7D6BC00611DC6 /* SignupViewController.swift in Sources */,
 				8D3D838A28A7D19E00611DC6 /* UserModel.swift in Sources */,
 				8D3D839928A7EA3E00611DC6 /* SceneSelector.swift in Sources */,
 				8D184A2C28A720BA00F8E409 /* DSTextFieldView.swift in Sources */,
 				8D3D838628A7CD8900611DC6 /* UserDefaultsManager.swift in Sources */,
 				8D3D838D28A7D25E00611DC6 /* UserDefaults.swift in Sources */,
+				8DFD1F1328A9D00100F96887 /* NetworkManager.swift in Sources */,
 				8D184A2D28A720BA00F8E409 /* DSButton.swift in Sources */,
 				8D184A0F28A715EF00F8E409 /* SceneDelegate.swift in Sources */,
 				8D3D839528A7DA9500611DC6 /* DSViewController.swift in Sources */,
 				8D3D839728A7DFAB00611DC6 /* SignupPresenter.swift in Sources */,
 				8D3D838228A7CB6400611DC6 /* HomeViewController.swift in Sources */,
+				8DFD1F1128A9CE2A00F96887 /* ProductModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +515,7 @@
 		};
 		8D184A1E28A715F400F8E409 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ADD6DE47534440831479F85 /* Pods-Drapshop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -461,6 +543,7 @@
 		};
 		8D184A1F28A715F400F8E409 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A71935764962E877E8A6375 /* Pods-Drapshop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
