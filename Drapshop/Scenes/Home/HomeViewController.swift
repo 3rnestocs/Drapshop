@@ -82,27 +82,27 @@ class HomeViewController: DSViewController {
 }
 
 extension HomeViewController: HomePresenterDelegate {
-    func fetchImagesSucceeded() {
+    func fetchProductsSucceeded() {
         collectionView.reloadData()
         hideActivityIndicator()
     }
     
-    func fetchImagesFailed(_ message: String) {
+    func fetchProductsFailed(_ message: String) {
         hideActivityIndicator()
     }
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        presenter.getCatalogue().count
+        presenter.getProducts().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
             return UICollectionViewCell()
         }
-        let item = presenter.getCatalogue()[indexPath.row]
-        cell.setupCell(image: item.urls.regular, name: item.getName(indexPath.row + 1))
+        let item = presenter.getProducts()[indexPath.row]
+        cell.setupCell(image: item.getImage(), name: item.getName())
         return cell
     }
     

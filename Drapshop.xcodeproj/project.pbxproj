@@ -18,6 +18,7 @@
 		8D184A2B28A720BA00F8E409 /* DSTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D184A2728A720B900F8E409 /* DSTextFieldView.xib */; };
 		8D184A2C28A720BA00F8E409 /* DSTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D184A2828A720B900F8E409 /* DSTextFieldView.swift */; };
 		8D184A2D28A720BA00F8E409 /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D184A2A28A720BA00F8E409 /* DSButton.swift */; };
+		8D2C1F7228AAA1B200AC7088 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C1F7128AAA1B200AC7088 /* String.swift */; };
 		8D3D838228A7CB6400611DC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D838028A7CB6400611DC6 /* HomeViewController.swift */; };
 		8D3D838328A7CB6400611DC6 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3D838128A7CB6400611DC6 /* HomeViewController.xib */; };
 		8D3D838628A7CD8900611DC6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D838528A7CD8900611DC6 /* UserDefaultsManager.swift */; };
@@ -53,6 +54,7 @@
 		8D184A2728A720B900F8E409 /* DSTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSTextFieldView.xib; sourceTree = "<group>"; };
 		8D184A2828A720B900F8E409 /* DSTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSTextFieldView.swift; sourceTree = "<group>"; };
 		8D184A2A28A720BA00F8E409 /* DSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSButton.swift; sourceTree = "<group>"; };
+		8D2C1F7128AAA1B200AC7088 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8D3D838028A7CB6400611DC6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8D3D838128A7CB6400611DC6 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		8D3D838528A7CD8900611DC6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				8D3D838C28A7D25E00611DC6 /* UserDefaults.swift */,
+				8D2C1F7128AAA1B200AC7088 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				8D8BE84228A9DBBC002B9BB3 /* HomeCollectionViewCell.swift in Sources */,
 				8D3D839528A7DA9500611DC6 /* DSViewController.swift in Sources */,
 				8D3D839728A7DFAB00611DC6 /* SignupPresenter.swift in Sources */,
+				8D2C1F7228AAA1B200AC7088 /* String.swift in Sources */,
 				8D3D838228A7CB6400611DC6 /* HomeViewController.swift in Sources */,
 				8DFD1F1128A9CE2A00F96887 /* ProductModel.swift in Sources */,
 			);
@@ -425,7 +429,7 @@
 		8D184A1B28A715F400F8E409 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ACCESS_KEY = UOUEQQ2beMeV2ILZGua44EeLFmKMFeG0Ha8Xx6p0yRM;
+				ACCESS_KEY = ffabb0deeamshc97ebddd1f31af1p1b4a23jsn13b8e9e34254;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -486,7 +490,7 @@
 		8D184A1C28A715F400F8E409 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ACCESS_KEY = UOUEQQ2beMeV2ILZGua44EeLFmKMFeG0Ha8Xx6p0yRM;
+				ACCESS_KEY = ffabb0deeamshc97ebddd1f31af1p1b4a23jsn13b8e9e34254;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;

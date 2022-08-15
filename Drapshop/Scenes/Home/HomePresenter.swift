@@ -8,47 +8,48 @@
 import Foundation
 
 protocol HomePresenterDelegate: AnyObject {
-    func fetchImagesSucceeded()
-    func fetchImagesFailed(_ message: String)
+    func fetchProductsSucceeded()
+    func fetchProductsFailed(_ message: String)
 }
 
 class HomePresenter {
     weak var viewController: HomePresenterDelegate?
-    private var catalogue: [Image]?
-    private var searchedCatalogue: [Image] = []
+    private var products: [Product]?
+    private var searchedProducts: [Product] = []
     private var isSearching: Bool = false
     
     func fetchCatalogue() {
-        NetworkManager.shared.request([Image].self) { result in
+        NetworkManager.shared.request(ProductResponse.self) { result in
             switch result {
-            case .success(let images):
-                self.catalogue = images
-                self.viewController?.fetchImagesSucceeded()
+            case .success(let response):
+                self.products = response.products
+                self.viewController?.fetchProductsSucceeded()
             case .failure(let error):
-                self.viewController?.fetchImagesFailed(error.localizedDescription)
+                self.viewController?.fetchProductsFailed(error.localizedDescription)
             }
         }
     }
     
-    func getCatalogue() -> [Image] {
-        guard let catalogue = catalogue else {
+    func getProducts() -> [Product] {
+        guard let products = products else {
             return []
         }
-        return isSearching ? searchedCatalogue : catalogue
+        return isSearching ? searchedProducts : products
     }
     
     func searchProduct(by query: String) {
-        guard let searched = catalogue?.enumerated().filter({
-            return $0.element.getName($0.offset + 1).localizedCaseInsensitiveContains(query)
+        guard let searched = products?.filter({
+            guard let name = $0.name else { return false }
+            return name.localizedCaseInsensitiveContains(query)
         }) else {
             return
         }
         
-        updateSearchStatus(searched.map({$0.element}), status: !query.isEmpty)
+        updateSearchStatus(searched, status: !query.isEmpty)
     }
     
-    private func updateSearchStatus(_ searched: [Image], status: Bool) {
+    private func updateSearchStatus(_ searched: [Product], status: Bool) {
         isSearching = status
-        searchedCatalogue = searched
+        searchedProducts = searched
     }
 }

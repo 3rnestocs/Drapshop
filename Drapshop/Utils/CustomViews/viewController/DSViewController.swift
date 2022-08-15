@@ -61,6 +61,8 @@ class DSViewController: UIViewController {
     
     func showActivityIndicator() {
         activityIndicatorView = UIActivityIndicatorView(style: .medium)
+        activityIndicatorView.tintColor = .black
+        activityIndicatorView.color = .black
         let frameSize: CGPoint = CGPoint(x: UIScreen.main.bounds.size.width*0.5, y: UIScreen.main.bounds.size.height*0.5)
         activityIndicatorView?.center = frameSize
         self.view.addSubview(activityIndicatorView!)

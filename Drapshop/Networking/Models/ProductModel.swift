@@ -7,19 +7,40 @@
 
 import Foundation
 
-struct Image: Codable {
-    var id: String?
-    var description: String?
-    var urls: ImageURL
+struct ProductResponse: Codable {
+    var categoryName: String?
+    var itemCount: Int?
+    var products: [Product]?
+}
+
+struct Product: Codable {
+    var id: Int?
+    var name: String?
+    var price: Price?
+    var brandName: String?
+    var imageUrl: String?
     
-    func getName(_ index: Int) -> String {
-        guard let description = description else {
-            return "Product \(index)"
+    func getImage() -> String? {
+        guard let imageUrl = imageUrl else {
+            return nil
         }
-        return description
+        return "http://\(imageUrl)"
+    }
+    
+    func getName() -> String? {
+        guard let name = name else {
+            return nil
+        }
+        return name.trimmingCharacters(in: CharacterSet(charactersIn: "ASOS DESIGN 4505")).firstCapitalized()
     }
 }
 
-struct ImageURL: Codable {
-    var regular: String
+struct Price: Codable {
+    var current: GenericField
+    var currency: String
+}
+
+struct GenericField: Codable {
+    var value: Double
+    var text: String
 }
