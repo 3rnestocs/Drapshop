@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1FF18CE4A70650654A77A43D /* Pods_Drapshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668365142B84C367B646481B /* Pods_Drapshop.framework */; };
+		8D007AA828A9E03F00A3885C /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D007AA728A9E03F00A3885C /* ErrorModel.swift */; };
 		8D184A0D28A715EF00F8E409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D184A0C28A715EF00F8E409 /* AppDelegate.swift */; };
 		8D184A0F28A715EF00F8E409 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D184A0E28A715EF00F8E409 /* SceneDelegate.swift */; };
 		8D184A1128A715EF00F8E409 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D184A1028A715EF00F8E409 /* LoginViewController.swift */; };
@@ -28,15 +29,19 @@
 		8D3D839728A7DFAB00611DC6 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839628A7DFAB00611DC6 /* SignupPresenter.swift */; };
 		8D3D839928A7EA3E00611DC6 /* SceneSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839828A7EA3E00611DC6 /* SceneSelector.swift */; };
 		8D3D839B28A7EBE800611DC6 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839A28A7EBE800611DC6 /* LoginPresenter.swift */; };
+		8D8BE84228A9DBBC002B9BB3 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BE84028A9DBBC002B9BB3 /* HomeCollectionViewCell.swift */; };
+		8D8BE84328A9DBBC002B9BB3 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8BE84128A9DBBC002B9BB3 /* HomeCollectionViewCell.xib */; };
 		8DFD1F0F28A9CE0100F96887 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD1F0E28A9CE0100F96887 /* HomePresenter.swift */; };
 		8DFD1F1128A9CE2A00F96887 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD1F1028A9CE2A00F96887 /* ProductModel.swift */; };
 		8DFD1F1328A9D00100F96887 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD1F1228A9D00100F96887 /* NetworkManager.swift */; };
+		8DFD1F1628A9D6CB00F96887 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD1F1528A9D6CB00F96887 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A71935764962E877E8A6375 /* Pods-Drapshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drapshop.release.xcconfig"; path = "Target Support Files/Pods-Drapshop/Pods-Drapshop.release.xcconfig"; sourceTree = "<group>"; };
 		0ADD6DE47534440831479F85 /* Pods-Drapshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drapshop.debug.xcconfig"; path = "Target Support Files/Pods-Drapshop/Pods-Drapshop.debug.xcconfig"; sourceTree = "<group>"; };
 		668365142B84C367B646481B /* Pods_Drapshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Drapshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D007AA728A9E03F00A3885C /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		8D184A0928A715EF00F8E409 /* Drapshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drapshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D184A0C28A715EF00F8E409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D184A0E28A715EF00F8E409 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,9 +64,12 @@
 		8D3D839628A7DFAB00611DC6 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		8D3D839828A7EA3E00611DC6 /* SceneSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneSelector.swift; sourceTree = "<group>"; };
 		8D3D839A28A7EBE800611DC6 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		8D8BE84028A9DBBC002B9BB3 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		8D8BE84128A9DBBC002B9BB3 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		8DFD1F0E28A9CE0100F96887 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		8DFD1F1028A9CE2A00F96887 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		8DFD1F1228A9D00100F96887 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8DFD1F1528A9D6CB00F96887 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +98,6 @@
 				0ADD6DE47534440831479F85 /* Pods-Drapshop.debug.xcconfig */,
 				0A71935764962E877E8A6375 /* Pods-Drapshop.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,6 +158,7 @@
 		8D184A2428A7208800F8E409 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8DFD1F1528A9D6CB00F96887 /* Environment.swift */,
 				8D3D839828A7EA3E00611DC6 /* SceneSelector.swift */,
 				8D3D838B28A7D25400611DC6 /* Extensions */,
 				8D184A2528A720A600F8E409 /* CustomViews */,
@@ -188,6 +196,7 @@
 		8D3D837F28A7CB4D00611DC6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8D8BE84528A9DC9F002B9BB3 /* HomeCell */,
 				8DFD1F0E28A9CE0100F96887 /* HomePresenter.swift */,
 				8D3D838028A7CB6400611DC6 /* HomeViewController.swift */,
 				8D3D838128A7CB6400611DC6 /* HomeViewController.xib */,
@@ -217,6 +226,7 @@
 			children = (
 				8D3D838928A7D19E00611DC6 /* UserModel.swift */,
 				8DFD1F1028A9CE2A00F96887 /* ProductModel.swift */,
+				8D007AA728A9E03F00A3885C /* ErrorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,6 +255,15 @@
 				8D3D839428A7DA9500611DC6 /* DSViewController.swift */,
 			);
 			path = viewController;
+			sourceTree = "<group>";
+		};
+		8D8BE84528A9DC9F002B9BB3 /* HomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				8D8BE84028A9DBBC002B9BB3 /* HomeCollectionViewCell.swift */,
+				8D8BE84128A9DBBC002B9BB3 /* HomeCollectionViewCell.xib */,
+			);
+			path = HomeCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +329,7 @@
 				8D3D839228A7D6BC00611DC6 /* SignupViewController.xib in Resources */,
 				8D184A1928A715F400F8E409 /* LaunchScreen.storyboard in Resources */,
 				8D184A1628A715F400F8E409 /* Assets.xcassets in Resources */,
+				8D8BE84328A9DBBC002B9BB3 /* HomeCollectionViewCell.xib in Resources */,
 				8D3D838328A7CB6400611DC6 /* HomeViewController.xib in Resources */,
 				8D184A2B28A720BA00F8E409 /* DSTextFieldView.xib in Resources */,
 				8D184A2328A71D8600F8E409 /* LoginViewController.xib in Resources */,
@@ -375,9 +395,12 @@
 				8D184A2C28A720BA00F8E409 /* DSTextFieldView.swift in Sources */,
 				8D3D838628A7CD8900611DC6 /* UserDefaultsManager.swift in Sources */,
 				8D3D838D28A7D25E00611DC6 /* UserDefaults.swift in Sources */,
+				8D007AA828A9E03F00A3885C /* ErrorModel.swift in Sources */,
 				8DFD1F1328A9D00100F96887 /* NetworkManager.swift in Sources */,
 				8D184A2D28A720BA00F8E409 /* DSButton.swift in Sources */,
 				8D184A0F28A715EF00F8E409 /* SceneDelegate.swift in Sources */,
+				8DFD1F1628A9D6CB00F96887 /* Environment.swift in Sources */,
+				8D8BE84228A9DBBC002B9BB3 /* HomeCollectionViewCell.swift in Sources */,
 				8D3D839528A7DA9500611DC6 /* DSViewController.swift in Sources */,
 				8D3D839728A7DFAB00611DC6 /* SignupPresenter.swift in Sources */,
 				8D3D838228A7CB6400611DC6 /* HomeViewController.swift in Sources */,
@@ -402,6 +425,7 @@
 		8D184A1B28A715F400F8E409 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ACCESS_KEY = UOUEQQ2beMeV2ILZGua44EeLFmKMFeG0Ha8Xx6p0yRM;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -462,6 +486,7 @@
 		8D184A1C28A715F400F8E409 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ACCESS_KEY = UOUEQQ2beMeV2ILZGua44EeLFmKMFeG0Ha8Xx6p0yRM;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;

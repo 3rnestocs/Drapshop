@@ -17,6 +17,7 @@ class DSViewController: UIViewController {
 
     // MARK: - Properties
     lazy var theme: NavigationStyle = viewControllerTheme()
+    private var activityIndicatorView: UIActivityIndicatorView!
     
     // MARK: - Lifecycle
     override func viewWillAppear(_ animated: Bool) {
@@ -56,5 +57,21 @@ class DSViewController: UIViewController {
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         navigationController?.navigationBar.tintColor = .black
+    }
+    
+    func showActivityIndicator() {
+        activityIndicatorView = UIActivityIndicatorView(style: .medium)
+        let frameSize: CGPoint = CGPoint(x: UIScreen.main.bounds.size.width*0.5, y: UIScreen.main.bounds.size.height*0.5)
+        activityIndicatorView?.center = frameSize
+        self.view.addSubview(activityIndicatorView!)
+        self.view.bringSubviewToFront(activityIndicatorView!)
+        activityIndicatorView?.startAnimating()
+    }
+
+    func hideActivityIndicator() {
+        if activityIndicatorView != nil {
+            activityIndicatorView?.stopAnimating()
+            activityIndicatorView = nil
+        }
     }
 }

@@ -8,5 +8,6 @@ target 'Drapshop' do
   # Pods for Drapshop
 
 	pod 'Alamofire'
+	pod 'Kingfisher'
 
 end

@@ -11,11 +11,21 @@ import Foundation
 class SceneSelector {
     static let shared = SceneSelector()
 
-    func setInitialSCene() {
+    func setInitialScene() {
+        if UserDefaults.standard.user != nil {
+            let homeVC = HomeViewController(nibName: HomeViewController.identifier, bundle: nil)
+            setScene(fromViewController: homeVC)
+        } else {
+            let loginVC = LoginViewController(nibName: LoginViewController.identifier, bundle: nil)
+            setScene(fromViewController: loginVC)
+        }
+    }
+
+    func setLoginScene() {
         let loginVC = LoginViewController(nibName: LoginViewController.identifier, bundle: nil)
         setScene(fromViewController: loginVC)
     }
-
+    
     func setHomeScene() {
         let homeVC = HomeViewController(nibName: HomeViewController.identifier, bundle: nil)
         setScene(fromViewController: homeVC)
@@ -54,5 +64,13 @@ class SceneSelector {
         window.layer.add(transition, forKey: nil)
 
         window.rootViewController = viewController
+    }
+    
+    func setWindow(_ window: UIWindow?) {
+        guard let window = window else {
+            return
+        }
+
+        window.makeKey()
     }
 }

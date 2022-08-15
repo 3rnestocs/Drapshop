@@ -13,5 +13,5 @@ struct Image: Codable {
 }
 
 struct ImageURL: Codable {
-    var regular, full: String
+    var regular: String
 }

@@ -6,12 +6,39 @@
 //
 
 import Foundation
+import Alamofire
 
 class NetworkManager {
     
     static let shared = NetworkManager()
     private init() {}
     
-    let baseURL = "https://api.unsplash.com/"
+    private let baseURL = "https://api.unsplash.com/photos"
+    private var headers: HTTPHeaders {
+        let auth = HTTPHeader(name: "Authorization", value: "Client-ID \(Environment.getEnvironmentVariable(name: .accessKey))")
+        let version = HTTPHeader(name: "Accept-Version", value: "v1")
+        let headers = HTTPHeaders([
+            version, auth
+        ])
+        return headers
+    }
     
+    func request<T: Codable>(_ type: T.Type, completion: @escaping(Result<T, Error>) -> Void) {
+        AF.request(baseURL, method: .get, headers: headers).responseData { response in
+            switch response.result {
+            case .success(let data) :
+                do {
+                    guard let object = try? JSONDecoder().decode(type, from: data) else {
+                        if let errorResult = try? JSONSerialization.jsonObject(with: data, options: []) as? CustomError {
+                            completion(.failure(errorResult))
+                        }
+                        return
+                    }
+                    completion(.success(object))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }
