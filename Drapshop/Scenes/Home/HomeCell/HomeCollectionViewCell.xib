@@ -24,13 +24,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="236"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BPi-lx-Jn8">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="196"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVX-4P-j5a">
-                                        <rect key="frame" x="0.0" y="200" width="200" height="36"/>
+                                        <rect key="frame" x="0.0" y="196" width="200" height="40"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slO-kX-Yfo">
-                                                <rect key="frame" x="24" y="10" width="152" height="16"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slO-kX-Yfo">
+                                                <rect key="frame" x="24" y="8" width="152" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -38,9 +38,11 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="slO-kX-Yfo" firstAttribute="top" secondItem="eVX-4P-j5a" secondAttribute="top" constant="8" id="4uT-Dc-Map"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="48" id="5IO-eG-c8z"/>
                                             <constraint firstItem="slO-kX-Yfo" firstAttribute="leading" secondItem="eVX-4P-j5a" secondAttribute="leading" constant="24" id="5gx-oa-gIc"/>
-                                            <constraint firstAttribute="height" constant="36" id="8zL-4d-zWG"/>
                                             <constraint firstItem="slO-kX-Yfo" firstAttribute="centerX" secondItem="eVX-4P-j5a" secondAttribute="centerX" id="WnK-JM-PEA"/>
+                                            <constraint firstAttribute="bottom" secondItem="slO-kX-Yfo" secondAttribute="bottom" constant="8" id="ews-gN-mQx"/>
                                             <constraint firstAttribute="trailing" secondItem="slO-kX-Yfo" secondAttribute="trailing" constant="24" id="qr4-2V-eIK"/>
                                             <constraint firstItem="slO-kX-Yfo" firstAttribute="centerY" secondItem="eVX-4P-j5a" secondAttribute="centerY" id="yYI-EI-uYn"/>
                                         </constraints>

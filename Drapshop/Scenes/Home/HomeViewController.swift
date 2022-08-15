@@ -45,8 +45,10 @@ class HomeViewController: DSViewController {
     
     private func setupUI() {
         setupCollectionView()
+        setupTapGesture()
         salirButton.backgroundColor = .systemYellow
-        searchView.textType = .defaultType
+        searchView.textType = .search
+        searchView.viewController = self
     }
     
     private func setupCollectionView() {
@@ -63,9 +65,19 @@ class HomeViewController: DSViewController {
         presenter.fetchCatalogue()
     }
     
+    private func setupTapGesture() {
+        let tapRecognizer = UITapGestureRecognizer()
+        tapRecognizer.addTarget(self, action: #selector(didTapView))
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+    
     // MARK: - Actions
     @IBAction private func salirButtonTapped(_ sender: UIButton) {
         SceneSelector.shared.setLoginScene()
+    }
+    
+    @objc private func didTapView() {
+      self.view.endEditing(true)
     }
 }
 
@@ -76,7 +88,6 @@ extension HomeViewController: HomePresenterDelegate {
     }
     
     func fetchImagesFailed(_ message: String) {
-        print("T3ST", message)
         hideActivityIndicator()
     }
 }
@@ -90,12 +101,9 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.setupCell(image: presenter.getCatalogue()[indexPath.row].urls.regular, name: "Product number \(indexPath.row)")
+        let item = presenter.getCatalogue()[indexPath.row]
+        cell.setupCell(image: item.urls.regular, name: item.getName(indexPath.row + 1))
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print("T3ST", presenter.getCatalogue().count, presenter.catalogue?.count)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -109,5 +117,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         UIEdgeInsets(top: 24, left: 24, bottom: 24, right: 24)
+    }
+}
+
+extension HomeViewController: DSTextFieldViewDelegate {
+    func didType(_ text: String) {
+        presenter.searchProduct(by: text)
+        collectionView.reloadData()
     }
 }

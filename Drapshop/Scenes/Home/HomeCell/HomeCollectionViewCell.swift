@@ -21,7 +21,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 32
     }
     
-    func setupCell(image: String?, name: String) {
+    func setupCell(image: String?, name: String?) {
         productNameLabel.text = name
         if let image = image, let url = URL(string: image) {
             productImageView.kf.setImage(with: url)

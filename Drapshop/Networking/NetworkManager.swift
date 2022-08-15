@@ -22,9 +22,15 @@ class NetworkManager {
         ])
         return headers
     }
+    private var params: [String: Any] {
+        let params = [
+            "per_page": 30
+        ]
+        return params
+    }
     
     func request<T: Codable>(_ type: T.Type, completion: @escaping(Result<T, Error>) -> Void) {
-        AF.request(baseURL, method: .get, headers: headers).responseData { response in
+        AF.request(baseURL, method: .get, parameters: params, headers: headers).responseData { response in
             switch response.result {
             case .success(let data) :
                 do {

@@ -12,6 +12,11 @@ enum TextType {
     case defaultType
     case username
     case password
+    case search
+}
+
+protocol DSTextFieldViewDelegate: AnyObject {
+    func didType(_ text: String)
 }
 
 class DSTextFieldView: UIView {
@@ -28,6 +33,7 @@ class DSTextFieldView: UIView {
             configureView()
         }
     }
+    weak var viewController: DSTextFieldViewDelegate?
 
     // MARK: - Lifecycle
     override init(frame: CGRect) {
@@ -63,6 +69,8 @@ class DSTextFieldView: UIView {
         case .password:
             self.textField.isSecureTextEntry = true
             setPlaceHolder(title: "Escribe tu contraseña")
+        case .search:
+            setPlaceHolder(title: "Busca un producto")
         case .defaultType:
             self.textField.keyboardType = .default
         }
@@ -141,6 +149,7 @@ extension DSTextFieldView: UITextFieldDelegate {
             if textType == .password, updatedText.count > 8 {
                 return false
             }
+            viewController?.didType(updatedText)
         }
         return true
     }
