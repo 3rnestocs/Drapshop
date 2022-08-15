@@ -38,6 +38,10 @@ class HomeViewController: DSViewController {
     }
     
     // MARK: - Setup
+    override func viewControllerTheme() -> DSViewController.NavigationStyle {
+        .hidden
+    }
+    
     private func setup() {
         setupUI()
         requestImages()
@@ -45,7 +49,6 @@ class HomeViewController: DSViewController {
     
     private func setupUI() {
         setupCollectionView()
-        setupTapGesture()
         salirButton.backgroundColor = .systemYellow
         searchView.textType = .search
         searchView.viewController = self
@@ -65,19 +68,9 @@ class HomeViewController: DSViewController {
         presenter.fetchCatalogue()
     }
     
-    private func setupTapGesture() {
-        let tapRecognizer = UITapGestureRecognizer()
-        tapRecognizer.addTarget(self, action: #selector(didTapView))
-        self.view.addGestureRecognizer(tapRecognizer)
-    }
-    
     // MARK: - Actions
     @IBAction private func salirButtonTapped(_ sender: UIButton) {
-        SceneSelector.shared.setLoginScene()
-    }
-    
-    @objc private func didTapView() {
-      self.view.endEditing(true)
+        presenter.logout()
     }
 }
 

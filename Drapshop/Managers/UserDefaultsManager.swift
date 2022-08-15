@@ -12,7 +12,7 @@ class UserManager {
         UserDefaults.standard.user = user
     }
     
-    static func deleteUser(_ user: User) {
+    static func deleteUser() {
         UserDefaults.standard.user = nil
     }
     

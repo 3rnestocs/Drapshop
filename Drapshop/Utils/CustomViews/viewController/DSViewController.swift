@@ -20,6 +20,11 @@ class DSViewController: UIViewController {
     private var activityIndicatorView: UIActivityIndicatorView!
     
     // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupTapGesture()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigationStyle()
@@ -59,6 +64,12 @@ class DSViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .black
     }
     
+    private func setupTapGesture() {
+        let tapRecognizer = UITapGestureRecognizer()
+        tapRecognizer.addTarget(self, action: #selector(didTapView))
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+    
     func showActivityIndicator() {
         activityIndicatorView = UIActivityIndicatorView(style: .medium)
         activityIndicatorView.tintColor = .black
@@ -75,5 +86,10 @@ class DSViewController: UIViewController {
             activityIndicatorView?.stopAnimating()
             activityIndicatorView = nil
         }
+    }
+    
+    
+    @objc private func didTapView() {
+      self.view.endEditing(true)
     }
 }

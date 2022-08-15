@@ -13,10 +13,10 @@ class SceneSelector {
 
     func setInitialScene() -> UIViewController {
         if UserDefaults.standard.user != nil {
-            let homeVC = HomeViewController(nibName: HomeViewController.identifier, bundle: nil)
+            let homeVC = UINavigationController(rootViewController: HomeViewController(nibName: HomeViewController.identifier, bundle: nil))
             return homeVC
         } else {
-            let loginVC = LoginViewController(nibName: LoginViewController.identifier, bundle: nil)
+            let loginVC = UINavigationController(rootViewController: LoginViewController(nibName: LoginViewController.identifier, bundle: nil))
             return loginVC
         }
     }
@@ -31,7 +31,7 @@ class SceneSelector {
         setScene(fromViewController: homeVC)
     }
 
-    func setScene(fromViewController viewController: UIViewController, inNavigationController showNavigationController: Bool = false) {
+    func setScene(fromViewController viewController: UIViewController, inNavigationController showNavigationController: Bool = true) {
 
         let nextViewController: UIViewController
 

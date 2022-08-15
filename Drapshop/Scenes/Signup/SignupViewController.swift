@@ -55,7 +55,7 @@ class SignupViewController: DSViewController {
     }
     
     private func setupButton() {
-        enviarButton.style = .send
+        enviarButton.style = .login
     }
     
     // MARK: - Helpers

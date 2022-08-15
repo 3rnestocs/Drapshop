@@ -18,6 +18,11 @@ class HomePresenter {
     private var searchedProducts: [Product] = []
     private var isSearching: Bool = false
     
+    func logout() {
+        UserManager.deleteUser()
+        SceneSelector.shared.setLoginScene()
+    }
+    
     func fetchCatalogue() {
         NetworkManager.shared.request(ProductResponse.self) { result in
             switch result {

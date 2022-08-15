@@ -15,7 +15,6 @@ class DSButton: UIButton {
         case login
         case register
         case forgotPassword
-        case send
     }
 
     // MARK: - Properties
@@ -59,15 +58,13 @@ class DSButton: UIButton {
         case .simple:
             setTitleColor(.black, for: .normal)
             backgroundColor = .systemYellow.withAlphaComponent(0.7)
-        case .login, .register, .send:
+        case .login, .register:
             var title: String!
             switch style {
             case .login:
                 title = "Entrar"
             case .register:
                 title = "Registrarse"
-            case .send:
-                title = "Enviar"
             default:
                 break
             }
