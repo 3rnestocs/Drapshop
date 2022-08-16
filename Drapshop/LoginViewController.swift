@@ -19,7 +19,6 @@ class LoginViewController: DSViewController {
     @IBOutlet private(set) weak var usuarioView: DSTextFieldView!
     @IBOutlet private(set) weak var claveView: DSTextFieldView!
     @IBOutlet private(set) weak var entrarButton: DSButton!
-    @IBOutlet private(set) weak var olvidarButton: DSButton!
     @IBOutlet private(set) weak var usuarioWarningView: UIView!
     @IBOutlet private(set) weak var usuarioWarningLabel: UILabel!
     @IBOutlet private(set) weak var claveWarningView: UIView!
@@ -65,7 +64,6 @@ class LoginViewController: DSViewController {
     private func setupButtons() {
         registrateButton.style = .register
         entrarButton.style = .login
-        olvidarButton.style = .forgotPassword
     }
     
     private func setupTextFieldViews() {
@@ -125,10 +123,6 @@ class LoginViewController: DSViewController {
         if checkCredentials() {
             SceneSelector.shared.setHomeScene()
         }
-    }
-    
-    @IBAction private func olvidarButtonTapped(_ sender: DSButton) {
-        
     }
     
     @objc private func keyboardWillShow(notification:NSNotification) {

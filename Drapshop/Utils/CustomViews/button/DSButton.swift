@@ -14,7 +14,6 @@ class DSButton: UIButton {
         case simple
         case login
         case register
-        case forgotPassword
     }
 
     // MARK: - Properties
@@ -71,10 +70,6 @@ class DSButton: UIButton {
             setTitle(title, for: .normal)
             setTitleColor(.systemYellow, for: .normal)
             backgroundColor = .black.withAlphaComponent(0.7)
-        case .forgotPassword:
-            backgroundColor = .clear
-            setTitle("¿Olvidaste tu contraseña?", for: .normal)
-            underLineText()
         }
     }
 }
@@ -119,17 +114,5 @@ extension DSButton {
 
         let yCenterConstraint = NSLayoutConstraint(item: self, attribute: .centerY, relatedBy: .equal, toItem: activityIndicator, attribute: .centerY, multiplier: 1, constant: 0)
         self.addConstraint(yCenterConstraint)
-    }
-
-    private func underLineText() {
-        guard let title = title(for: .normal) else { return }
-
-        let titleString = NSMutableAttributedString(string: title)
-        titleString.addAttribute(
-            .underlineStyle,
-            value: NSUnderlineStyle.single.rawValue,
-            range: NSRange(location: 0, length: title.count)
-        )
-        setAttributedTitle(titleString, for: .normal)
     }
 }

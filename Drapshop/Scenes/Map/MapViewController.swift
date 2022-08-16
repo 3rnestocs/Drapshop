@@ -51,7 +51,6 @@ class MapViewController: DSViewController {
     private func setupUI() {
         setupMap()
         homeButton.backgroundColor = .systemYellow
-        view.backgroundColor = .black.withAlphaComponent(0.7)
     }
     
     private func setupMap() {
