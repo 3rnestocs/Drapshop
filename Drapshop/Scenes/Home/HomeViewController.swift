@@ -30,7 +30,7 @@ class HomeViewController: DSViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setup()
+        setupUI()
     }
     
     override func viewDidLayoutSubviews() {
@@ -39,14 +39,14 @@ class HomeViewController: DSViewController {
         mapaButton.layer.cornerRadius = mapaButton.frame.height / 2
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        requestImages()
+    }
+    
     // MARK: - Setup
     override func viewControllerTheme() -> DSViewController.NavigationStyle {
         .hidden
-    }
-    
-    private func setup() {
-        setupUI()
-        requestImages()
     }
     
     private func setupUI() {

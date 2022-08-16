@@ -25,7 +25,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rb-tE-oYk">
-                    <rect key="frame" x="24" y="56" width="48" height="48"/>
+                    <rect key="frame" x="24" y="44" width="48" height="48"/>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="48" id="udO-6b-KGO"/>
@@ -50,14 +50,13 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="4Rb-tE-oYk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="QFW-Wq-i2Y"/>
+                <constraint firstItem="4Rb-tE-oYk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QFW-Wq-i2Y"/>
                 <constraint firstItem="In3-tk-Dpa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Qzb-T3-aQs"/>
                 <constraint firstAttribute="bottom" secondItem="2Ia-ib-SGb" secondAttribute="bottom" id="UmD-QM-4Hp"/>
                 <constraint firstItem="In3-tk-Dpa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="i1o-9r-UUa"/>
                 <constraint firstItem="4Rb-tE-oYk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="i5Q-ZN-bLS"/>
                 <constraint firstItem="2Ia-ib-SGb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="noh-GJ-BN3"/>
                 <constraint firstItem="2Ia-ib-SGb" firstAttribute="top" secondItem="In3-tk-Dpa" secondAttribute="bottom" constant="8" id="okT-fs-d7E"/>
-                <constraint firstItem="2Ia-ib-SGb" firstAttribute="top" secondItem="4Rb-tE-oYk" secondAttribute="bottom" constant="12" id="rJf-i7-jeU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Ia-ib-SGb" secondAttribute="trailing" id="wnA-V2-TiS"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="44.866071428571423"/>

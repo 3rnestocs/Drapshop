@@ -41,7 +41,7 @@ class MapViewController: DSViewController {
     
     // MARK: - Setup
     override func viewControllerTheme() -> DSViewController.NavigationStyle {
-        .dark
+        .hidden
     }
     
     private func setup() {

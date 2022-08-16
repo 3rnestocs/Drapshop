@@ -13,7 +13,6 @@ class DSViewController: UIViewController {
     enum NavigationStyle {
         case simple
         case hidden
-        case dark
     }
 
     // MARK: - Properties
@@ -42,7 +41,7 @@ class DSViewController: UIViewController {
         var backImage = UIImage()
 
         switch theme {
-        case .simple, .dark:
+        case .simple:
             navigationController?.setNavigationBarHidden(false, animated: true)
             if let image = UIImage(named: "backArrow") {
                 backImage = image
@@ -59,10 +58,10 @@ class DSViewController: UIViewController {
     private func setupNavigationBar() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = theme == .dark ? .black : .white
+        appearance.backgroundColor = .white
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        navigationController?.navigationBar.tintColor = theme == .dark ? .white : .black
+        navigationController?.navigationBar.tintColor = .black
     }
     
     private func setupTapGesture() {
