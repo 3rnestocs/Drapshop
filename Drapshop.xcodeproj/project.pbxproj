@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1FF18CE4A70650654A77A43D /* Pods_Drapshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668365142B84C367B646481B /* Pods_Drapshop.framework */; };
 		8D007AA828A9E03F00A3885C /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D007AA728A9E03F00A3885C /* ErrorModel.swift */; };
+		8D086EC728AB4C8700DB5516 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D086EC628AB4C8700DB5516 /* CustomAnnotation.swift */; };
 		8D184A0D28A715EF00F8E409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D184A0C28A715EF00F8E409 /* AppDelegate.swift */; };
 		8D184A0F28A715EF00F8E409 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D184A0E28A715EF00F8E409 /* SceneDelegate.swift */; };
 		8D184A1128A715EF00F8E409 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D184A1028A715EF00F8E409 /* LoginViewController.swift */; };
@@ -32,6 +33,9 @@
 		8D3D839B28A7EBE800611DC6 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D839A28A7EBE800611DC6 /* LoginPresenter.swift */; };
 		8D8BE84228A9DBBC002B9BB3 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BE84028A9DBBC002B9BB3 /* HomeCollectionViewCell.swift */; };
 		8D8BE84328A9DBBC002B9BB3 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8BE84128A9DBBC002B9BB3 /* HomeCollectionViewCell.xib */; };
+		8DB3AF9328AB1AA500ACC22B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3AF9128AB1AA500ACC22B /* MapViewController.swift */; };
+		8DB3AF9428AB1AA500ACC22B /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB3AF9228AB1AA500ACC22B /* MapViewController.xib */; };
+		8DB3AF9628AB225000ACC22B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB3AF9528AB225000ACC22B /* MapKit.framework */; };
 		8DFD1F0F28A9CE0100F96887 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD1F0E28A9CE0100F96887 /* HomePresenter.swift */; };
 		8DFD1F1128A9CE2A00F96887 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD1F1028A9CE2A00F96887 /* ProductModel.swift */; };
 		8DFD1F1328A9D00100F96887 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD1F1228A9D00100F96887 /* NetworkManager.swift */; };
@@ -43,6 +47,7 @@
 		0ADD6DE47534440831479F85 /* Pods-Drapshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drapshop.debug.xcconfig"; path = "Target Support Files/Pods-Drapshop/Pods-Drapshop.debug.xcconfig"; sourceTree = "<group>"; };
 		668365142B84C367B646481B /* Pods_Drapshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Drapshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D007AA728A9E03F00A3885C /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		8D086EC628AB4C8700DB5516 /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		8D184A0928A715EF00F8E409 /* Drapshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drapshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D184A0C28A715EF00F8E409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D184A0E28A715EF00F8E409 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +73,9 @@
 		8D3D839A28A7EBE800611DC6 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		8D8BE84028A9DBBC002B9BB3 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		8D8BE84128A9DBBC002B9BB3 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		8DB3AF9128AB1AA500ACC22B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8DB3AF9228AB1AA500ACC22B /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		8DB3AF9528AB225000ACC22B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8DFD1F0E28A9CE0100F96887 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		8DFD1F1028A9CE2A00F96887 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		8DFD1F1228A9D00100F96887 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -79,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB3AF9628AB225000ACC22B /* MapKit.framework in Frameworks */,
 				1FF18CE4A70650654A77A43D /* Pods_Drapshop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +98,7 @@
 		7EB8D96E0FD0A1390E6D37FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DB3AF9528AB225000ACC22B /* MapKit.framework */,
 				668365142B84C367B646481B /* Pods_Drapshop.framework */,
 			);
 			name = Frameworks;
@@ -101,6 +111,14 @@
 				0A71935764962E877E8A6375 /* Pods-Drapshop.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8D086EC528AB4C7000DB5516 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				8D086EC628AB4C8700DB5516 /* CustomAnnotation.swift */,
+			);
+			path = Annotation;
 			sourceTree = "<group>";
 		};
 		8D184A0028A715EE00F8E409 = {
@@ -140,6 +158,7 @@
 		8D184A2028A71D5A00F8E409 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8DB3AF9028AB1A9300ACC22B /* Map */,
 				8D3D838E28A7D6A000611DC6 /* Signup */,
 				8D3D837F28A7CB4D00611DC6 /* Home */,
 				8D184A2128A71D6100F8E409 /* Login */,
@@ -269,6 +288,16 @@
 			path = HomeCell;
 			sourceTree = "<group>";
 		};
+		8DB3AF9028AB1A9300ACC22B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				8D086EC528AB4C7000DB5516 /* Annotation */,
+				8DB3AF9128AB1AA500ACC22B /* MapViewController.swift */,
+				8DB3AF9228AB1AA500ACC22B /* MapViewController.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -332,6 +361,7 @@
 				8D3D839228A7D6BC00611DC6 /* SignupViewController.xib in Resources */,
 				8D184A1928A715F400F8E409 /* LaunchScreen.storyboard in Resources */,
 				8D184A1628A715F400F8E409 /* Assets.xcassets in Resources */,
+				8DB3AF9428AB1AA500ACC22B /* MapViewController.xib in Resources */,
 				8D8BE84328A9DBBC002B9BB3 /* HomeCollectionViewCell.xib in Resources */,
 				8D3D838328A7CB6400611DC6 /* HomeViewController.xib in Resources */,
 				8D184A2B28A720BA00F8E409 /* DSTextFieldView.xib in Resources */,
@@ -399,8 +429,10 @@
 				8D3D838628A7CD8900611DC6 /* UserDefaultsManager.swift in Sources */,
 				8D3D838D28A7D25E00611DC6 /* UserDefaults.swift in Sources */,
 				8D007AA828A9E03F00A3885C /* ErrorModel.swift in Sources */,
+				8DB3AF9328AB1AA500ACC22B /* MapViewController.swift in Sources */,
 				8DFD1F1328A9D00100F96887 /* NetworkManager.swift in Sources */,
 				8D184A2D28A720BA00F8E409 /* DSButton.swift in Sources */,
+				8D086EC728AB4C8700DB5516 /* CustomAnnotation.swift in Sources */,
 				8D184A0F28A715EF00F8E409 /* SceneDelegate.swift in Sources */,
 				8DFD1F1628A9D6CB00F96887 /* Environment.swift in Sources */,
 				8D8BE84228A9DBBC002B9BB3 /* HomeCollectionViewCell.swift in Sources */,

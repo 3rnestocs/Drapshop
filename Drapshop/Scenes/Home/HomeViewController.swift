@@ -16,6 +16,7 @@ class HomeViewController: DSViewController {
 
     // MARK: - Outlets
     @IBOutlet private(set) weak var salirButton: UIButton!
+    @IBOutlet private(set) weak var mapaButton: UIButton!
     @IBOutlet private(set) weak var searchView: DSTextFieldView!
     @IBOutlet private(set) weak var collectionView: UICollectionView!
     
@@ -35,6 +36,7 @@ class HomeViewController: DSViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         salirButton.layer.cornerRadius = salirButton.frame.height / 2
+        mapaButton.layer.cornerRadius = mapaButton.frame.height / 2
     }
     
     // MARK: - Setup
@@ -50,6 +52,7 @@ class HomeViewController: DSViewController {
     private func setupUI() {
         setupCollectionView()
         salirButton.backgroundColor = .systemYellow
+        mapaButton.backgroundColor = .systemYellow
         searchView.textType = .search
         searchView.viewController = self
     }
@@ -66,6 +69,10 @@ class HomeViewController: DSViewController {
     private func requestImages() {
         showActivityIndicator()
         presenter.fetchCatalogue()
+    }
+    
+    @IBAction private func mapaButtonTapped(_ sender: UIButton) {
+        SceneSelector.shared.setMapScene()
     }
     
     // MARK: - Actions

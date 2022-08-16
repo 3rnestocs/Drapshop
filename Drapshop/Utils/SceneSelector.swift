@@ -30,6 +30,11 @@ class SceneSelector {
         let homeVC = HomeViewController(nibName: HomeViewController.identifier, bundle: nil)
         setScene(fromViewController: homeVC)
     }
+    
+    func setMapScene() {
+        let mapVC = MapViewController(nibName: MapViewController.identifier, bundle: nil)
+        setScene(fromViewController: mapVC)
+    }
 
     func setScene(fromViewController viewController: UIViewController, inNavigationController showNavigationController: Bool = true) {
 

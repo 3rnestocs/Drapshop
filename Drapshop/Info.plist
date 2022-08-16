@@ -4,6 +4,27 @@
 <dict>
 	<key>ACCESS_KEY</key>
 	<string>$(ACCESS_KEY)</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Drapshop necesita tu ubicacion para mejorar tu experiencia de usuario</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Drapshop necesita tu ubicacion para mejorar tu experiencia de usuario</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>MKDirectionsRequest</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.apple.maps.directionsrequest</string>
+			</array>
+		</dict>
+	</array>
+	<key>MKDirectionsApplicationSupportedModes</key>
+	<array>
+		<string>MKDirectionsModeBike</string>
+		<string>MKDirectionsModeCar</string>
+		<string>MKDirectionsModePedestrian</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
